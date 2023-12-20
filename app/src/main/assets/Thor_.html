@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/library/bootstrap.min.css">
+    <script src="assets/library/bootstrap.bundle.min.js"></script>
+
+    <title>Thor: New - Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #FF4500;
+            text-decoration: underline;
+        }
+
+        p {
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .poster {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-style-show-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+    </style>
+    <script>
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<button class="btn btn-primary" onclick="goBack()">Back</button>
+
+<div class="container">
+    <div class="custom-style-show-video">
+        <h1>Thor: New</h1>
+        <img class="poster" src="assets/images/Thor.jpg" alt="Thor: New Poster">
+    </div>
+
+    <h2>Overview</h2>
+    <p>
+        Thor: New is the latest installment in the Thor film series, part of the Marvel Cinematic Universe (MCU).
+        The
+        movie follows the adventures of the Asgardian superhero Thor, the God of Thunder. Directed by <span
+            class="director">Jane Director</span>, the film stars <span class="actors">Chris Hemsworth</span>
+        reprising
+        his role as Thor.
+    </p>
+
+    <h2>Plot</h2>
+    <p>
+        In Thor: New, the story continues after the events of the previous films. Thor embarks on a new quest to
+        protect
+        the Nine Realms and maintain peace across the universe. He faces formidable challenges, confronts powerful
+        villains, and explores his own inner journey to discover the true meaning of being a hero.
+    </p>
+
+    <h2>Release Date</h2>
+    <p>
+        The official release date for Thor: New is yet to be announced. Stay tuned for updates!
+    </p>
+
+    <!--show video-->
+    <div class="row">
+        <div class="col-12">
+            <!--show video movie-->
+            <div class="custom-style-show-video">
+                <video width="100%" height="auto" controls>
+                    <!-- Replace 'video/video.mp4' with the correct path to your video file -->
+                    <source src="assets/videos/Thor.mp4" type="video/mp4">
+                </video>
+            </div>
+            <br>
+        </div>
+    </div>
+    <!--end of container-->
+</div>
+</body>
+
+</html>

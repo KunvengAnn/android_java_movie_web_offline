@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <title>Iron Man 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/library/bootstrap.min.css">
+    <script src="assets/library/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #FF4500;
+            text-decoration: underline;
+        }
+
+        p {
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .poster {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-style-show-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+    </style>
+    <script>
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<button class="btn btn-primary" onclick="goBack()">Back</button>
+
+<div class="container">
+    <div class="custom-style-show-video">
+        <h1>Iron Man 4</h1>
+        <img class="poster" src="assets/images/iron_man.jpg" alt="Iron Man 4 Poster">
+    </div>
+    <h2>Overview</h2>
+    <p>
+        Iron Man 4 is an upcoming superhero film based on the Marvel Comics character Iron Man. It is the fourth
+        installment in the Iron Man film series and serves as a sequel to Iron Man 3. The movie is directed by <span
+            class="director">John Director</span> and stars <span class="actors">Robert Downey Jr.</span> reprising
+        his
+        role as Tony Stark / Iron Man.
+    </p>
+
+    <h2>Plot</h2>
+    <p>
+        The plot details for Iron Man 4 are currently undisclosed. However, it is expected to continue Tony Stark's
+        story and explore new challenges and adventures as Iron Man battles against powerful enemies and protects
+        the
+        world with his advanced suit and technology.
+    </p>
+
+    <h2>Release Date</h2>
+    <p>
+        The official release date for Iron Man 4 is yet to be announced. Stay tuned for updates!
+    </p>
+
+    <!--show video movie-->
+    <div class="row">
+        <div class="col-12">
+            <div class="custom-style-show-video">
+                <video width="100%" height="auto" controls>
+                    <!-- Replace 'video/video.mp4' with the correct path to your video file -->
+                    <source src="assets/videos/iron_man_4.mp4" type="video/mp4">
+                    <!--track for show subTitle-->
+                    <track label="English" kind="subtitles" srclang="en"
+                           src="assets/file_srt/iron_man_4.mp4_en-us.vtt" default>
+                </video>
+                <div style="margin-top: 10%;"></div>
+                <!--audio-->
+                <audio controls>
+                    <!-- Replace 'assets/audio/audio1.mp3' with the correct path to your audio file -->
+                    <source src="assets/audio/iron_man_4.mp3" type="audio/mpeg">
+                </audio>
+
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!--end of container-->
+</div>
+</body>
+
+</html>

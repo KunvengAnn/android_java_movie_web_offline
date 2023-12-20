@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/library/bootstrap.min.css">
+    <script src="assets/library/bootstrap.bundle.min.js"></script>
+
+    <title>John Witch 4 - Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #FF4500;
+            text-decoration: underline;
+        }
+
+        p {
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .poster {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-style-show-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+    </style>
+    <script>
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<button class="btn btn-primary" onclick="goBack()">Back</button>
+
+<div class="container">
+    <div class="custom-style-show-video">
+        <h1>John Witch 4</h1>
+        <img class="poster" src="assets/images/jonh_witch.jpg" alt="John Witch 4 Poster">
+    </div>
+
+    <h2>Overview</h2>
+    <p>
+        John Witch 4 is an upcoming action thriller film following the story of legendary assassin John Witch. It is
+        the
+        fourth installment in the John Witch film series. The movie is directed by <span class="director">Michael
+                Director</span> and stars <span class="actors">Keanu Reeves</span> reprising his role as John Witch.
+    </p>
+
+    <h2>Plot</h2>
+    <p>
+        The plot details for John Witch 4 are currently undisclosed. However, fans can expect intense action
+        sequences,
+        high-stakes missions, and an exploration of the mysterious underworld inhabited by assassins and
+        mercenaries.
+    </p>
+
+    <h2>Release Date</h2>
+    <p>
+        The official release date for John Witch 4 is yet to be announced. Stay tuned for updates!
+    </p>
+
+    <!--show video-->
+    <div class="row">
+        <div class="col-12">
+            <!--show video movie-->
+            <div class="custom-style-show-video">
+                <video width="100%" height="auto" controls>
+                    <!-- Replace 'video/video.mp4' with the correct path to your video file -->
+                    <source src="assets/videos/John_Wick_4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <!--end of div container-->
+</div>
+</body>
+
+</html>

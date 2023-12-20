@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/library/bootstrap.min.css">
+    <script src="assets/library/bootstrap.bundle.min.js"></script>
+
+    <title>Korea: My Demon - Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+
+        h1 {
+            color: #FF4500;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        p {
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .poster {
+            display: block;
+            margin: 0 auto;
+            max-width: 75%;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .custom-style-show-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <script>
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<button class="btn btn-primary" onclick="goBack()">Back</button>
+
+<div class="container">
+    <h1>Korea: My Demon</h1>
+
+    <img class="poster" src="assets/images/my_demon.jpg" alt="Korea: My Demon Poster">
+
+    <h2>Overview</h2>
+    <p>
+        Korea: My Demon is a captivating South Korean supernatural thriller film. The movie delves into the world of
+        dark folklore and ancient legends. Directed by <span class="director">Lee Director</span>, the film features
+        a talented ensemble cast including <span class="actors">Song Joong-ki</span>, <span class="actors">Kim
+                Soo-hyun</span>, and <span class="actors">Song Kang</span>.
+    </p>
+
+    <h2>Plot</h2>
+    <p>
+        In Korea: My Demon, a young archaeologist discovers an ancient relic that unleashes a malevolent force. As
+        the demon wreaks havoc across the land, a group of unlikely heroes, including Song Kang's character, must
+        band together to unravel the mystery behind the demon's origins and find a way to stop its reign of terror
+        before it consumes everything they hold dear.
+    </p>
+
+    <h2>Release Date</h2>
+    <p>
+        Korea: My Demon is set to release on <span class="release-date">November 24, 2023</span>. Mark your
+        calendars and get ready for an unforgettable supernatural journey!
+    </p>
+
+    <!--show video-->
+    <div class="row">
+        <div class="col-12">
+            <!--show video movie-->
+            <div class="custom-style-show-video">
+                <video width="100%" height="auto" controls>
+                    <!-- Replace 'video/video.mp4' with the correct path to your video file -->
+                    <source src="assets/videos/My_demon.mp4" type="video/mp4">
+                </video>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

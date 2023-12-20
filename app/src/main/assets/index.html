@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/library/bootstrap.min.css">
+    <script src="assets/library/bootstrap.bundle.min.js"></script>
+
+    <style>
+        button.btn.btn-primary.text-white {
+            background: transparent;
+            border: none;
+        }
+
+
+        .style-content {
+            /* height: 20%;
+            width: 100%;
+            border: 1px solid red; */
+            background-color: blue;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            height: 20%;
+            /* Set initial height */
+        }
+
+        .hidden-content {
+            background-color: blue;
+        }
+
+        .marginleft-style {
+            margin-left: 5%;
+        }
+
+        /* CSS styles for movie cards */
+        .movie_style {
+            display: flex;
+            /* Allow movie cards to wrap to the next line */
+            flex-wrap: wrap;
+            /* Spacing between movie cards */
+            gap: 0px;
+            /* Center movie cards horizontally */
+            justify-content: left;
+            flex-direction: row;
+        }
+
+
+        .movie-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /*Use only margin it mean margin all(left,right,top,bottom) with 0.5%*/
+            margin: 0.5%;
+            padding: 10px;
+            width: 30%;
+            /* Set a specific width for each movie card */
+            text-align: center;
+        }
+
+        .movie-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*set border to show movie in this border or container*/
+        .my_content_border_movie {
+            margin-top: 5%;
+            padding: 5%;
+            /*set padding like this it set all bottom top right left*/
+            border: 2px solid blue;
+            display: flex;
+            /* Set the display to flex */
+            justify-content: center;
+            /* Center the content horizontally */
+        }
+
+        /*screen small alway show 2 card movie*/
+        /* 576px =<it's process this*/
+        @media (max-width: 576px) {
+            .movie-card {
+                width: 48%;
+                /* Adjust the width to fit two cards per row */
+                margin: 1%;
+                /* Add small margin for spacing */
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnContent = document.getElementById('btn_content');
+            const hiddenContent = document.getElementById('hidden_content');
+            let isExpanded = false;
+            //
+            btnContent.addEventListener('click', function () {
+                if (!isExpanded) {
+                    hiddenContent.style.display = 'block';
+                    const fullHeight = hiddenContent.scrollHeight;
+                    hiddenContent.style.height = fullHeight + 'px';
+                } else {
+                    hiddenContent.style.height = '0px';
+                    hiddenContent.style.display = 'none';
+                }
+                isExpanded = !isExpanded;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 " style="height: 100%;">
+            <div class="style-content " id="btn_content">
+                <div class="marginleft-style">
+                    <img src="assets/images/icons8-menu-50.png" style="height: 2%; width: 2%;" alt="Menu Icon" />
+                    <button class="btn btn-primary text-white" style="margin-left: -0.5%;">Menu</button>
+                </div>
+            </div>
+            <div class="hidden-content" id="hidden_content" style="display: none;">
+                <!-- Hidden content to show -->
+                <div class="marginleft-style">
+                    <a href="about_ann.html" style="font-weight: bold;">about Develop</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- movie i want is here -->
+    <div class="container">
+        <div class="my_content_border_movie">
+            <div class="movie_style row row-cols-2" id="movies"></div>
+        </div>
+
+    </div>
+
+    <script>
+        // Sample list of movies
+        const movieList = [
+            { image: 'assets/images/iron_man.jpg', title: 'Iron Man 4', htmlfile: 'iron_man.html' },
+            { image: 'assets/images/Thor.jpg', title: `Thor`, htmlfile: 'Thor_.html' },
+
+            { image: 'assets/images/my_demon.jpg', title: 'My Demon', htmlfile: 'my_demon.html' },
+            { image: 'assets/images/jonh_witch.jpg', title: 'Jonh Witch', htmlfile: 'jonh_witch.html' },
+
+        ];
+
+        // Function to create movie cards
+        function createMovieCards() {
+            const moviesContainer = document.getElementById('movies');
+
+            movieList.forEach((movie, index) => {
+                const movieCard = document.createElement('div');
+                movieCard.classList.add('movie-card');
+
+                const image = document.createElement('img');
+                image.src = movie.image; //pass image list 
+                image.alt = `Movie ${index + 1}`;
+                movieCard.appendChild(image);
+
+                const title = document.createElement('h3');
+                title.textContent = movie.title; //pass title list
+                movieCard.appendChild(title);
+
+                //onclick
+                movieCard.onclick = () => {
+                    // alert(`Clicked movie index: ${index}`);
+                    // Open the associated HTML file in the current window
+                    if (movie.htmlfile) {
+                        window.location.href = movie.htmlfile; //pass htmlfile to it for open
+                        //window.open(movie.htmlfile); //new tap or page
+                    }
+                };
+
+                moviesContainer.appendChild(movieCard); //add movieCard to moviesContainer
+            });
+        }
+
+        // Call the function to create movie cards
+        createMovieCards();
+    </script>
+</body>
+
+</html>
